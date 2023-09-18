@@ -17,7 +17,6 @@ body {
     grid-template-columns: 20px repeat(2,1fr) 20px;
     grid-template-rows: 40px 163px 1fr 10%;
 
-    gap: 20px;
 }
 
 header {
@@ -39,6 +38,7 @@ header h1 {
 
 main {
     font-size: 1.6rem;
+    margin-top: 40px;
     grid-column: 2 / -2;
     grid-row: 3 / 4;
 }
