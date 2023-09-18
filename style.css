@@ -6,45 +6,96 @@
 
 :root {
     font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #FFF3DA;
     height: 100vh;
+
+    display: grid;
+    grid-template-columns: 20px repeat(2,1fr) 20px;
+    grid-template-rows: 40px 20% 1fr 10%;
+
+    gap: 20px;
+}
+
+header {
+    background-color: #fff;
+
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid #BEADFA;
+    padding: 20px;
+
+    grid-column: 2 / -2;
+    grid-row: 2 / 3;
+}
+
+header h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #BEADFA;
+    font-size: 3.2rem;
 }
 
 main {
-    align-self: center;
-    background-color: rgb(255, 246, 211);
-    width: 70%;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.15);
+    font-size: 1.6rem;
+    grid-column: 2 / -2;
+    grid-row: 3 / 4;
 }
 
-h1 {
-    margin-bottom: 0.5rem;
-}
-
-ul {
+.item-list {
     list-style-type: none;
 }
 
-li {
-    margin-top: 0.8rem;
+.item-list li {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 5px;
+
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #BEADFA;
+    margin-right: 10px;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #BEADFA;
+}
+
+input[type="checkbox"]:checked:after {
+    content: '\2713';
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 2px;
 }
 
 footer {
-    font-size: 0.75rem;
-    align-self: center;
-    margin-bottom: 2rem;
-}
+    background-color: #fff;
 
-@media (min-width: 700px) {
-    main {
-        width: 40%;
-    }
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+    
+    text-align: center;
+    font-size: 1.2rem;
+
+    color: #00000080;
+    padding-top: 17px;
 }
