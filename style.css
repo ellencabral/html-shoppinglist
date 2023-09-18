@@ -15,7 +15,7 @@ body {
 
     display: grid;
     grid-template-columns: 20px repeat(2,1fr) 20px;
-    grid-template-rows: 40px 20% 1fr 10%;
+    grid-template-rows: 40px 163px 1fr 10%;
 
     gap: 20px;
 }
@@ -49,7 +49,7 @@ main {
 
 .item-list li {
     background-color: #fff;
-    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 16px;
     border-radius: 5px;
 
@@ -98,4 +98,10 @@ footer {
 
     color: #00000080;
     padding-top: 17px;
+}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 350px 1fr;
+    }
 }
